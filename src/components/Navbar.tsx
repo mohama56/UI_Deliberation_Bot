@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 const logoPath = '/CornellLogo.png';
 const absoluteLogoPath = `${window.location.origin}/CornellLogo.png`;
 
-
 const Navbar: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const location = useLocation();
@@ -147,15 +146,7 @@ const Navbar: React.FC = () => {
                             className="nav-link"
                             style={isActive('/definitions') ? activeNavLinkStyle : navLinkStyle}
                         >
-                            Deliberation Guide
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            to="/rug-check"
-                            className="nav-link"
-                            style={isActive('/rug-check') ? activeNavLinkStyle : navLinkStyle}
-                        >
+                            
                             Concepts
                         </Link>
                     </li>
@@ -164,7 +155,16 @@ const Navbar: React.FC = () => {
                             to="/deliberation"
                             className="nav-link"
                             style={isActive('/deliberation') ? activeNavLinkStyle : navLinkStyle}
-                        
+                        >
+                            Deliberation Guide
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="/rug-check"
+                        className="nav-link"
+                        style={isActive('/rug-check') ? activeNavLinkStyle : navLinkStyle}
+                    
                         >
                             Rug Checks
                         </Link>
