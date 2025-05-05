@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 const RugCheck: React.FC = () => {
-    const rugCheck = [
+    const securityChecks = [
         {
             check: "Mint Authority Status",
             description: "Verifies if token creators can still mint unlimited new tokens, which could be used to dilute value and crash the price.",
@@ -126,6 +126,27 @@ const RugCheck: React.FC = () => {
                 <p>A visual explanation of how rug pulls operate and harm investors.</p>
 
                 <div className="relative mt-6 h-96 bg-gray-900 rounded-lg p-4 overflow-hidden">
+                    {/* Security Checks */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        {securityChecks.map((check, index) => (
+                            <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700">
+                                <div className="flex items-center mb-2">
+                                    {check.icon}
+                                    <h3 className="text-sm font-medium ml-2">{check.check}</h3>
+                                    <span className={`ml-auto text-xs px-2 py-1 rounded ${
+                                        check.status === "Critical" ? "bg-red-900 text-red-300" : 
+                                        check.status === "High" ? "bg-yellow-900 text-yellow-300" : 
+                                        "bg-blue-900 text-blue-300"
+                                    }`}>
+                                        {check.status}
+                                    </span>
+                                </div>
+                                <p className="text-xs text-gray-400 mb-2">{check.description}</p>
+                                <p className="text-xs text-gray-500 italic">{check.method}</p>
+                            </div>
+                        ))}
+                    </div>
+
                     {/* Background Grid */}
                     <div className="absolute inset-0 grid grid-cols-12 grid-rows-6 gap-2 opacity-10">
                         {Array(12 * 6).fill(0).map((_, i) => (
@@ -147,7 +168,7 @@ const RugCheck: React.FC = () => {
                                     <div className={`bg-gray-800 p-3 rounded-lg border border-${stage.color}-500`}>
                                         <h3 className={`text-sm font-medium text-${stage.color}-400 mb-1 flex items-center`}>
                                             <span className={`bg-${stage.color}-500 text-white rounded-full w-5 h-5 inline-flex items-center justify-center mr-2`}>
-                                                {stage.number}
+                                                
                                             </span>
                                             {stage.title}
                                         </h3>
