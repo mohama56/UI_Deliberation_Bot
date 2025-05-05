@@ -9,15 +9,12 @@ import delib56 from '../assets/Delib5&6.png';
 const Deliberation: React.FC = () => {
     return (
         <div className="content-container">
-            <h1>Accountability Framework</h1>
+            <h1>Deliberation</h1>
             <p className="mb-6">
-                Our trading bot implements Cornell's "Holding Bots Accountable" framework through
-                a comprehensive approach to ethical and responsible automation.
+                The principles outlined in the Deliberation Guide: Holding Bots Accountable are reflected in this trading 
+                bot’s design, particularly in how it approaches ethical communication, role obligations, and accountability.
             </p>
 
-            {/* Cornell Deliberation Framework Images */}
-            <div className="card mb-8">
-                <h2 className="mb-6 text-2xl font-bold text-blue-400">Cornell Deliberation Framework</h2>
 
                 <div className="space-y-8">
                     {/* Image 1 */}
@@ -61,8 +58,9 @@ const Deliberation: React.FC = () => {
                     </div>
                 </div>
 
-                <p className="text-center text-sm text-gray-400 mt-6">
-                    Cornell University's "Holding Bots Accountable" Framework
+                <p className="text-center text-sm text-gray-400 mt-4">
+                    BANA 6020 Managerial Accounting for Business Analytics
+                    Professor Robert Bloomfield
                 </p>
             </div>
         </div>
