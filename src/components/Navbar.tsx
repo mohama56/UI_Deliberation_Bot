@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-const logoPath = '/CornellLogo.png';
-const absoluteLogoPath = `${window.location.origin}/CornellLogo.png`;
+const logoPath = '/assets/CornellLogo.png';
+const absoluteLogoPath = `${window.location.origin}/assets/CornellLogo.png`;
+
 
 const Navbar: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
