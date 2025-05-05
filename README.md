@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# Bloomfield Bot Reports
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### A UI-Based Reflection on Governance and Accountability for Solana-Based Trading Bots  
+**Course:** BANA6020 – Managerial Reporting in Business Analytics  
+**Created by:** Alamin Mohammed  
+**Instructor:** Professor Robert Bloomfield
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Overview
 
-## Expanding the ESLint configuration
+This project presents a web-based interface designed to reflect on the ethical dimensions of an automated Solana trading bot I created earlier in my development work. That bot, focused on identifying potential rug pulls and executing trades with speed, inspired a deeper dive into how automated tools can be governed responsibly.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To explore that, this UI connects bot mechanics with broader questions of accountability and transparency, using the deliberation guide provided in the final weeks of the course as a post-build lens.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deliberation Insights Applied After Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The bot was originally developed to outperform bad actors in the DeFi space. Afterward, I applied the deliberation framework to analyze what ethical responsibilities the bot might hold if it were evaluated as a governed actor.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Role Identification** – It performs sniping trades with real-time contract checks to detect scam patterns.
+- **Obligations of Speech** – Its alerts about liquidity, minting rights, and token ownership concentration were made visible through the UI.
+- **Inside Accountability** – Trade logic was built to reject high-risk setups, not just to maximize speed or profit.
+- **Outside Accountability** – The UI now allows users to understand why certain tokens are rejected or flagged.
+- **Holding Others Accountable** – By surfacing red flags publicly, this tool challenges low-integrity projects on the network.
+
+---
+
+## Skills and Tools Used
+
+| Category               | Tools and Technologies                      |
+|------------------------|---------------------------------------------|
+| Frontend Framework     | React with Vite                             |
+| Language               | TypeScript                                  |
+| Styling                | Tailwind CSS                                |
+| Icons                  | Lucide React                                |
+| Version Control        | Git and GitHub                              |
+| Hosting                | Netlify (CI/CD integrated)                  |
+| IDE Support            | JetBrains Rider with AI assistance          |
+
+---
+
+## Live Web Interface
+
+[https://bloomfieldbotreports.netlify.app](https://bloomfieldbotreports.netlify.app)
+
+---
+
+
+## Disclosure
+
+JetBrains Rider AI was used for visual layout and code assistance. All logic, bot development, UI integration, and reflection were created by the author as part of a course-ending independent project.
